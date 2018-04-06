@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+				
+		</title>
+	</head>
+	<h1>
+		Bienvenue sur Asperblog, où je mettrai des news sur le développement d'Asperbot s'il y en a.
+		</h1>
+	<body>
+		{{salut}}
+		<br/>
+		<br/>
+	</body>
+	<a href='about'>
+		Pour en savoir plus sur nous et sur le projet Asperbot.
+	</a>
+	<body>
+		<br/>
+		<br/>
+		Entrez le texte que vous voulez analyser ci-dessous :
+		<br/>
+	</body>
+	<form action={% url "count"%}>
+		<textarea cols="40" rows="10" name="fulltext"></textarea>
+		<br />
+		<input type="submit" value="count" />
+	</form>
+</html>

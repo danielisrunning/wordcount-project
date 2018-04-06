@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+				
+		</title>
+	</head>
+	<h1>
+		La page où on compte les mots.
+	</h1>
+	<a href="{% url 'homepage'%}">
+		Pour lancer un nouveau comptage
+	</a>
+	<body>
+		Le texte contient {{count}} mots.
+		<br/>
+		Le mot le plus utilisé est "{{Big_word}}" : {{ Maximum }} fois.
+		<br/>
+	</body>
+	<h1>
+		Les mots les plus utilisés sont :
+	</h1>
+	<body>
+		{% for word, countnumber in Biggest_words %}
+		{{word}} : {{countnumber}}
+		<br/>
+		{%endfor%}
+		<br/>		
+		Full text : <br/> 
+	</body>
+	</html>
